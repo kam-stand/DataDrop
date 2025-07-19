@@ -31,6 +31,38 @@
     justify-content: center;
 }
 
+.auth-pricing{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    margin: 10px;
+    gap: 12px;
+}
+.pricing-tiers{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    border: 1px solid gray;
+    width: 300px;
+    height: 200px;
+    border-radius: 12px;
+
+}
+
+.pricing-tiers ul{
+      list-style-type: none; /* Removes bullets */
+  padding: 0; /* Removes default left padding */
+  margin: 0; /* Removes default top margin */
+}
+.pricing-tiers ul li {
+  border-bottom: 1px solid lightgray; /* Adds a thin black line */
+  padding: 8px 0; /* Add spacing */
+}
+
 .gsi-material-button {
   -moz-user-select: none;
   -webkit-user-select: none;

@@ -7,12 +7,37 @@ export function AuthPage() {
         <div className="auth">
 
             <div className="auth-welcome">
-                <h1>Welcome to DataDrop</h1>
+                <h1>Welcome to DataDrop!</h1>
                 <div>
-                    <p>At DataDrop allows for automated workflows via the browser. Any Downloads from a set url and work flow will immediaely begin process</p>
+                    <p>Automated data processing workflow for Chrome downloads</p>
+                   </div>
+            </div>
+            <div className="auth-pricing">
+                <div className="pricing-tiers">
+                    <h2>Free 0$</h2>
+                    <ul>
+                        <li>5 url downloads</li>
+                        <li>1 compute credits</li>
+                        <li>1 user in group</li>
+                    </ul>
+                </div>
+                <div className="pricing-tiers">
+                    <h2>Basic 5$</h2>
+                    <ul>
+                        <li>unlimited url downloads</li>
+                        <li>100 compute credits</li>
+                        <li>10+ users in group</li>
+                    </ul>
+                </div>
+                <div className="pricing-tiers">
+                    <h2>Pro 10$</h2>
+                    <ul>
+                        <li>unlimited url downloads</li>
+                        <li>unlimited compute credits</li>
+                        <li>unlimited users in group</li>
+                    </ul>
                 </div>
             </div>
-
             <div className="auth-credential">
                     <button className="gsi-material-button">
                         <div className="gsi-material-button-state"></div>
