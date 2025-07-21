@@ -14,3 +14,10 @@ CREATE TABLE access_tokens (
                                expires_in BIGINT,
                                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+
+CREATE  TABLE IF NOT EXISTS base_url(
+    id serial PRIMARY KEY,
+    base_url varchar(255),
+    file_type varchar(255)
+);

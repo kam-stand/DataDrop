@@ -1,44 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DataDrop</title>
-  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>📥 DataDrop</h1>
-    
-    <!-- Tab Navigation -->
-    <div class="tab-navigation">
-      <button class="tab-btn active" data-tab="downloads">Recent Downloads</button>
-      <button class="tab-btn" data-tab="urls">URLs</button>
-    </div>
-    
-    <!-- Downloads Tab Content -->
-    <div class="tab-content active" id="downloads-tab">
-      <div class="tab-actions">
-        <button id="refresh-btn" class="action-btn">🔄 Refresh</button>
-        <button id="clear-all-btn" class="action-btn danger">🗑️ Clear All</button>
-      </div>
-      <ul id="downloadsList">Loading...</ul>
-    </div>
-    
-    <!-- URLs Tab Content -->
-    <div class="tab-content" id="urls-tab">
-      <div class="url-section">
-        <h3>Monitored URLs</h3>
-        <p class="help-text">Add base URLs to automatically process downloads from these sites</p>
-        
-        <div class="add-url-form">
-          <input type="text" id="newUrlInput" placeholder="e.g., https://example.com" />
-          <button id="addUrlBtn" class="action-btn primary">Add URL</button>
-        </div>
-        
-        <ul id="urlsList">Loading...</ul>
-      </div>
-    </div>
+  <h1>DataDrop</h1>
+  <div class="tabs">
+    <button id="tab-add" class="tab">Add URL</button>
+    <button id="tab-view" class="tab">View URLs</button>
+    <button id="tab-downloads" class="tab">Recent Downloads</button>
+  </div>
+
+  <div id="add" class="tab-content">
+    <h3>Add Base URL</h3>
+    <input type="text" id="baseUrl" placeholder="Enter Base URL" />
+    <select id="fileType">
+      <option value="pdf">PDF</option>
+      <option value="image">Image</option>
+      <option value="doc">DOC</option>
+    </select>
+    <button id="addUrlBtn">Add</button>
+  </div>
+
+  <div id="view" class="tab-content" style="display:none;">
+    <h3>Base URLs</h3>
+    <ul id="urlList"></ul>
+  </div>
+
+  <div id="downloads" class="tab-content" style="display:none;">
+    <h3>Recent Downloads</h3>
+    <ul id="downloadList"></ul>
   </div>
 
   <script src="popup.js"></script>
