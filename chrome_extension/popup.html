@@ -5,29 +5,45 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>DataDrop</h1>
+  <h1>📂 DataDrop</h1>
+
   <div class="tabs">
-    <button id="tab-add" class="tab">Add URL</button>
+    <button id="tab-add" class="tab active">Add URL</button>
     <button id="tab-view" class="tab">View URLs</button>
     <button id="tab-downloads" class="tab">Recent Downloads</button>
   </div>
 
+  <!-- Add URL Tab -->
   <div id="add" class="tab-content">
     <h3>Add Base URL</h3>
     <input type="text" id="baseUrl" placeholder="Enter Base URL" />
     <select id="fileType">
       <option value="pdf">PDF</option>
-      <option value="image">Image</option>
+      <option value="jpeg">JPEG</option>
+      <option value="png">PNG</option>
+      <option value="csv">CSV</option>
+      <option value="txt">TXT</option>
       <option value="doc">DOC</option>
+      <option value="docx">DOCX</option>
+      <option value="xls">XLS</option>
+      <option value="xlsx">XLSX</option>
+      <option value="ppt">PPT</option>
+      <option value="pptx">PPTX</option>
+      <option value="zip">ZIP</option>
+      <option value="rar">RAR</option>
+      <option value="json">JSON</option>
+      <option value="xml">XML</option>
     </select>
-    <button id="addUrlBtn">Add</button>
+    <button id="addUrlBtn" class="primary-btn">➕ Add URL</button>
   </div>
 
+  <!-- View URLs Tab -->
   <div id="view" class="tab-content" style="display:none;">
     <h3>Base URLs</h3>
     <ul id="urlList"></ul>
   </div>
 
+  <!-- Downloads Tab -->
   <div id="downloads" class="tab-content" style="display:none;">
     <h3>Recent Downloads</h3>
     <ul id="downloadList"></ul>
