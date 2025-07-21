@@ -1,32 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ca3e496-13ba-47de-91a7-ec80d2ec10ff" name="Changes" comment="" />
+    <list default="true" id="2ca3e496-13ba-47de-91a7-ec80d2ec10ff" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/controller/GoogleAuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/dao/AccessTokenDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/dao/impl/AccessTokenDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/dto/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/model/AccessToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/service/GoogleAuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datadrop/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/datadrop/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datadrop/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/datadrop/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datadrop/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/datadrop/src/main/resources/schema.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Record" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "kam-stand"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kam-stand&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:kam-stand/DataDrop.git",
-    "accountId": "1eda096d-3890-4844-88ff-f98aca989df0"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:kam-stand/DataDrop.git&quot;,
+    &quot;accountId&quot;: &quot;1eda096d-3890-4844-88ff-f98aca989df0&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="307EqCDwoDxl8qKBAGOIa7cMFwL" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,13 +68,39 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.DatadropApplication.executor": "Run",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/kamhassan/Desktop/Projects/DataDrop/backend/datadrop/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql",
+      "mysql"
+    ]
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="DatadropApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="datadrop" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.backend.datadrop.DatadropApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -57,6 +117,8 @@
       <option name="presentableId" value="Default" />
       <updated>1752970401491</updated>
       <workItem from="1752970403636" duration="124000" />
+      <workItem from="1753077021091" duration="3111000" />
+      <workItem from="1753081618513" duration="2287000" />
     </task>
     <servers />
   </component>
