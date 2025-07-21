@@ -5,25 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ca3e496-13ba-47de-91a7-ec80d2ec10ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/controller/GoogleAuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/dao/AccessTokenDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/dao/impl/AccessTokenDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/dto/AuthResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/model/AccessToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/service/GoogleAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datadrop/src/main/java/com/backend/datadrop/model/Url.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datadrop/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/datadrop/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datadrop/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/datadrop/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datadrop/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/datadrop/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -118,7 +103,7 @@
       <updated>1752970401491</updated>
       <workItem from="1752970403636" duration="124000" />
       <workItem from="1753077021091" duration="3111000" />
-      <workItem from="1753081618513" duration="2287000" />
+      <workItem from="1753081618513" duration="3363000" />
     </task>
     <servers />
   </component>
