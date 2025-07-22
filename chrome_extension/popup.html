@@ -1,52 +1,131 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DataDrop</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .tab {
+      display: none;
+    }
+    .tab.active {
+      display: block;
+    }
+    .tab-buttons {
+      display: flex;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    .tab-button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      background: #f5f5f5;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+    .tab-button.active {
+      background: white;
+      border-bottom: 2px solid #007acc;
+    }
+    .download-item, .url-item, .file-item {
+      border: 1px solid #ddd;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .upload-btn, .add-url-btn, .refresh-btn {
+      background: #007acc;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+    .upload-btn:hover, .add-url-btn:hover, .refresh-btn:hover {
+      background: #005a9e;
+    }
+    .url-form {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: #f9f9f9;
+    }
+    .url-form input, .url-form select {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    .status {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .status.success {
+      background: #d4edda;
+      color: #155724;
+    }
+    .status.error {
+      background: #f8d7da;
+      color: #721c24;
+    }
+  </style>
 </head>
 <body>
-  <h1>📂 DataDrop</h1>
-
-  <div class="tabs">
-    <button id="tab-add" class="tab active">Add URL</button>
-    <button id="tab-view" class="tab">View URLs</button>
-    <button id="tab-downloads" class="tab">Recent Downloads</button>
-  </div>
-
-  <!-- Add URL Tab -->
-  <div id="add" class="tab-content">
-    <h3>Add Base URL</h3>
-    <input type="text" id="baseUrl" placeholder="Enter Base URL" />
-    <select id="fileType">
-      <option value="pdf">PDF</option>
-      <option value="jpeg">JPEG</option>
-      <option value="png">PNG</option>
-      <option value="csv">CSV</option>
-      <option value="txt">TXT</option>
-      <option value="doc">DOC</option>
-      <option value="docx">DOCX</option>
-      <option value="xls">XLS</option>
-      <option value="xlsx">XLSX</option>
-      <option value="ppt">PPT</option>
-      <option value="pptx">PPTX</option>
-      <option value="zip">ZIP</option>
-      <option value="rar">RAR</option>
-      <option value="json">JSON</option>
-      <option value="xml">XML</option>
-    </select>
-    <button id="addUrlBtn" class="primary-btn">➕ Add URL</button>
-  </div>
-
-  <!-- View URLs Tab -->
-  <div id="view" class="tab-content" style="display:none;">
-    <h3>Base URLs</h3>
-    <ul id="urlList"></ul>
+  <div class="tab-buttons">
+    <button class="tab-button active" data-tab="downloads">Downloads</button>
+    <button class="tab-button" data-tab="urls">Base URLs</button>
+    <button class="tab-button" data-tab="files">Processed Files</button>
   </div>
 
   <!-- Downloads Tab -->
-  <div id="downloads" class="tab-content" style="display:none;">
+  <div id="downloads" class="tab active">
     <h3>Recent Downloads</h3>
-    <ul id="downloadList"></ul>
+    <button class="refresh-btn" id="clearDownloadsBtn" style="margin-bottom: 15px;">Clear Recent Downloads</button>
+    <div id="downloadsList"></div>
+  </div>
+
+  <!-- Base URLs Tab -->
+  <div id="urls" class="tab">
+    <h3>Base URLs</h3>
+    <div class="url-form">
+      <input type="text" id="baseUrlInput" placeholder="Base URL (e.g., https://example.com)">
+      <select id="fileTypeSelect">
+        <option value="">Select file type</option>
+        <option value="pdf">PDF</option>
+        <option value="doc">DOC</option>
+        <option value="txt">TXT</option>
+        <option value="zip">ZIP</option>
+        <option value="image">Image</option>
+        <option value="other">Other</option>
+      </select>
+      <button class="add-url-btn" id="addUrlBtn">Add Base URL</button>
+    </div>
+    <button class="refresh-btn" id="refreshUrlsBtn">Refresh URLs</button>
+    <div id="urlsList"></div>
+  </div>
+
+  <!-- Processed Files Tab -->
+  <div id="files" class="tab">
+    <h3>Processed Files</h3>
+    <button class="refresh-btn" id="refreshFilesBtn">Refresh Files</button>
+    <div id="filesList"></div>
+  </div>
+
+  <div id="status"></div>
+  
+  <!-- Debug section -->
+  <div style="margin-top: 15px; padding: 10px; border-top: 1px solid #eee; font-size: 12px; color: #666;">
+    <button class="refresh-btn" id="testBackendBtn" style="font-size: 11px; padding: 3px 8px;">Test Backend Connection</button>
+    <span id="backendStatus" style="margin-left: 10px;"></span>
   </div>
 
   <script src="popup.js"></script>
