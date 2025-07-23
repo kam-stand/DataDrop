@@ -13,9 +13,9 @@
 ![Serverless](https://img.shields.io/badge/Serverless-Architecture-purple?style=flat-square)
 ![MIT License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)
 
-**Automated data processing workflow for Chrome downloads**
+**🚀 DataDrop – Automated file processing with AWS triggers**
 
-DataDrop is a Chrome extension that automatically processes downloads from monitored websites, sending them to cloud functions for data transformation and storing results in Google Drive.
+Upload a file, trigger automatic AWS processing, get results in Google Drive. A backend-driven automation tool that monitors downloads and runs serverless compute jobs for data transformation via Spring Boot API.
 
 ## 🚀 Features
 
