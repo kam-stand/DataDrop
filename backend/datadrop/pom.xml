@@ -40,21 +40,27 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk -->
+        <!-- Use specific S3 SDK instead of full AWS SDK -->
         <dependency>
             <groupId>com.amazonaws</groupId>
-            <artifactId>aws-java-sdk</artifactId>
-            <version>1.12.788</version>
+            <artifactId>aws-java-sdk-s3</artifactId>
+            <version>1.12.787</version>
         </dependency>
     </dependencies>
 

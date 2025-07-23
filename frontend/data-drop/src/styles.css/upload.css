@@ -1,0 +1,107 @@
+.upload-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.drop-zone {
+  border: 2px dashed var(--border-color);
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: var(--primary-bg);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drop-zone:hover {
+  border-color: var(--accent-green);
+  background-color: rgba(74, 222, 128, 0.05);
+}
+
+.drop-zone.active {
+  border-color: var(--accent-green);
+  background-color: rgba(74, 222, 128, 0.1);
+  transform: scale(1.02);
+}
+
+.drop-zone.has-file {
+  border-color: var(--accent-green);
+  background-color: rgba(74, 222, 128, 0.05);
+}
+
+.drop-message {
+  width: 100%;
+}
+
+.file-preview {
+  width: 100%;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--secondary-bg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-green), var(--success-green));
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.pipeline-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pipeline-step:last-child {
+  border-bottom: none;
+}
+
+.step-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-bg);
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.pipeline-step strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.pipeline-step p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 968px) {
+  .upload-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .drop-zone {
+    padding: 30px 15px;
+    min-height: 150px;
+  }
+}

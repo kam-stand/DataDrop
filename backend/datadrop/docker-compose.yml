@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:16
+    container_name: db
+    environment:
+      - POSTGRES_DB=DataDrop
+      - POSTGRES_USER=datadrop_user
+      - POSTGRES_PASSWORD=Kamrul14!
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  app:
+    image: "docker-spring-boot-postgres:latest"
+    build:
+      context: .
+    container_name: app
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/DataDrop
+      - SPRING_DATASOURCE_USERNAME=datadrop_user
+      - SPRING_DATASOURCE_PASSWORD=Kamrul14!
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+
+volumes:
+  pgdata:
