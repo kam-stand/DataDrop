@@ -194,6 +194,109 @@ DataDrop/
 - **Status tracking**: Visual indicators for processing states
 - **Clean design**: Modern gradients and smooth animations
 
+## 🔄 Workflow
+
+### 📊 AWS Lambda & S3 Integration
+
+DataDrop leverages AWS serverless architecture for scalable file processing. When a file is uploaded to S3, it automatically triggers Lambda functions for data transformation and analysis.
+
+#### 🏗️ Architecture Diagram
+
+```
+📁 File Upload → S3 Bucket → 🔔 Event Trigger → ⚡ Lambda Function → 📊 Process Data → 📁 Google Drive
+```
+
+#### ☁️ AWS Services Flow
+
+![AWS Lambda Architecture](https://docs.aws.amazon.com/images/lambda/latest/dg/images/overview-layers.png)
+
+**S3 Event-Driven Processing:**
+
+- 📤 Files uploaded to designated S3 bucket
+- 🔔 S3 events automatically trigger Lambda functions
+- ⚡ Lambda processes data (CSV, JSON, XML transformation)
+- 📊 Results stored back to S3 or forwarded to Google Drive
+
+![S3 Event Notifications](https://docs.aws.amazon.com/images/AmazonS3/latest/userguide/images/notification-how-it-works.png)
+
+#### 🚀 Lambda Function Triggers
+
+| Event Type              | Trigger       | Action                    |
+| ----------------------- | ------------- | ------------------------- |
+| `s3:ObjectCreated:*`    | File uploaded | Start processing pipeline |
+| `s3:ObjectCreated:Put`  | Direct upload | Immediate transformation  |
+| `s3:ObjectCreated:Post` | Form upload   | Validate and process      |
+
+### 🐳 Docker Deployment
+
+Run the entire DataDrop stack locally using Docker:
+
+#### 🏃‍♂️ Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/kam-stand/DataDrop.git
+cd DataDrop
+
+# Start all services with Docker Compose
+docker-compose up -d
+
+# Services will be available at:
+# Frontend: http://localhost:3000
+# Backend API: http://localhost:8080
+# Database: localhost:5432
+```
+
+#### 📋 Docker Services
+
+```yaml
+# docker-compose.yml structure
+services:
+  frontend: # React/Vite development server
+  backend: # Spring Boot API
+  database: # PostgreSQL database
+  localstack: # Local AWS services (S3, Lambda)
+```
+
+#### 🔧 Environment Configuration
+
+```bash
+# Create .env file for local development
+AWS_ACCESS_KEY_ID=your_access_key
+AWS_SECRET_ACCESS_KEY=your_secret_key
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+S3_BUCKET_NAME=datadrop-processing
+```
+
+#### 📦 Container Architecture
+
+```
+🐳 Docker Network: datadrop-network
+├── 🌐 Frontend Container (React + Vite)
+├── 🔧 Backend Container (Spring Boot + Java 17)
+├── 🗄️ Database Container (PostgreSQL 15)
+└── ☁️ LocalStack Container (AWS Services)
+```
+
+### 🛠️ Development Workflow
+
+1. **📝 Code Changes**: Edit source files locally
+2. **🔄 Hot Reload**: Frontend auto-refreshes on changes
+3. **🧪 Testing**: Run tests in isolated containers
+4. **🚀 Deployment**: Push to AWS with automated CI/CD
+
+#### 🔍 Monitoring & Logs
+
+```bash
+# View real-time logs
+docker-compose logs -f backend
+docker-compose logs -f frontend
+
+# Monitor Lambda executions locally
+docker-compose logs -f localstack
+```
+
 ---
 
 **Built with ❤️ for automated data workflows**
